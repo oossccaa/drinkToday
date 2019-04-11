@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        您今天還沒有紀錄飲水量喔!
+    </div>
+    <table class="hidden">
+        <thead>
+            <th>時間</th>
+            <th>水量</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="bar">
+        <div class="input">
+            <div>時間</div>
+            <select id="hour"></select>
+            <select id="min"></select>
+        </div>
+        <div class="input">
+            <div>
+                飲水量
+            </div>
+            <input id="drink-value" min="100" value="100" type="number" />
+        </div>
+        <div id="add-btn">新增</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

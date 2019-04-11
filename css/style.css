@@ -1,0 +1,39 @@
+@charset "UTF-8";
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 微軟正黑體;
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table td, table th {
+  border: 1px solid #777;
+  padding: 3px;
+  text-align: center;
+}
+
+table thead tr {
+  background: #1976d2;
+  color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+  background: #90caf9;
+}
+
+#bar #add-btn {
+  background: #0057e7;
+  padding: 4px;
+  border-radius: 5px;
+  margin: 5px 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
