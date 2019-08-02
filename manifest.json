@@ -11,6 +11,11 @@
       "default_popup": "popup.html"
     },
     "permissions": [
-      "activeTab"
-    ]
+      "activeTab",
+      "contextMenus"
+    ],
+    "background":{
+      "scripts": ["js/background.js"],
+      "persistent" : false
+    }
   }

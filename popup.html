@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
+    <!-- <script src="js/vue.js"></script> -->
 </head>
+
 <body>
-    <div>
-        您今天還沒有紀錄飲水量喔!
-    </div>
-    <table class="hidden">
-        <thead>
-            <th>時間</th>
-            <th>水量</th>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    <div id="bar">
-        <div class="input">
-            <div>時間</div>
-            <select id="hour"></select>
-            <select id="min"></select>
+    <div id="start-page">
+        <div class="title">
+            <div>請選擇今日的飲水量目標</div>
+            <input type="number" value="2500"  />
         </div>
-        <div class="input">
-            <div>
-                飲水量
+        <div id="start-btn" class="btn btn-outline-primary">開始</div>
+    </div>
+    <div id="main-page" class="hidden">
+        <div id="bar">
+            <div class="input">
+                <div>時　間：</div>
+                <select id="hour"></select>
+                <select id="min"></select>
             </div>
-            <input id="drink-value" min="100" value="100" type="number" />
+            <div class="input">
+                <div>飲水量：</div>
+                <div class="drink-flex">
+                    <button id="minus-btn" class="btn btn-outline-primary">-</button>
+                    <input id="drink-value" min="100" value="500" max="10000" type="number" readonly />
+                    <button id="plus-btn" class="btn btn-outline-primary">+</button>
+                </div>
+            </div>
+            <div id="add-btn">新增</div>
         </div>
-        <div id="add-btn">新增</div>
+        <div class="drink-list-empty">
+            您今天還沒有紀錄飲水量喔!
+        </div>
+        <table class="hidden drink-list">
+            <thead>
+                <th>時間</th>
+                <th>水量</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="dashboard">
+            <div class="input">
+                <div>今日應飲水量:</div>
+                <div><span id="mustDrink">3000</span> c.c.</div>
+            </div>
+            <div class="input">
+                <div>今日已飲水量:</div>
+                <div><span id="alreadyDrink">2000</span> c.c.</div>
+            </div>
+            <div class="input">
+                <div>今日還需飲水量:</div>
+                <div><span id="remainingDrink">1000</span> c.c.</div>
+            </div>
+        </div>
     </div>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
